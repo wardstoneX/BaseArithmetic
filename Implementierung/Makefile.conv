@@ -1,0 +1,7 @@
+CFLAGS=-std=c11 -O3 -Wall -Wextra -Wpedantic -g
+
+all: conv
+conv: tests/conversion_tests.c  src/calculations.c src/arithmetic_helper.c src/calculation_helper.c src/conversion.c
+	$(CC) $(CFLAGS) -o $@ $^
+clean:
+	rm -f conv
