@@ -1,43 +1,11 @@
-# G-adic Arithmetic Operations
+## Team Members
 
-This project implements arithmetic operations on g-adic numbers, where g can be any positive integer. Two distinct approaches have been implemented for performing arithmetic operations:
+- Jonas Nögel
+- Selim Mert Kaştan
+- Maxim Balajan
 
-## Direct Calculation (Main Implementation)
+# BaseArithmetic 
 
-Arithmetic operations are directly performed on g-adic numbers without conversion.
-Simple algorithms based on handwritten addition, subtraction, and multiplication are employed.
-Offers good performance for addition and subtraction.
+BaseArithmetic provides a function void arith_op_any_base(int base, const char *alph, const char *z1, const char *z2, char op, char *result) designed to handle arithmetic operations in various numeral systems. The function takes two numbers (z1 and z2), both represented in the specified base (base) and using the given alphabet (alph). It performs the specified arithmetic operation (op) which can be addition, subtraction, or multiplication, and writes the result to the result buffer.
 
-## Hybrid Implementation (Reference Implementation)
-
-Numbers are partially converted before calculations for improved efficiency.
-Utilizes a hybrid methodology, combining partial conversion and subsequent operation calculations.
-Provides efficient multiplication.
-
-## Implementation Details
-
-Direct Calculation (Main Implementation)
-Addition and Subtraction: Algorithms leverage handwritten methods for base g.
-Multiplication: Uses a parallel pointer approach for efficient multiplication.
-Hybrid Implementation (Reference Implementation)
-Conversion to Decimal System: Converts operands to decimals before calculations.
-Arithmetic Operations: Leverages the processor for decimal calculations.
-
-## Addition and Subtraction
-
-Both implementations exhibit linear runtime, with the main implementation being approximately 0.5 times faster.
-Multiplication
-Both implementations are in quadratic runtime classes.
-The main implementation has a growth rate about three times faster than the reference implementation.
-
-## Conclusion
-
-Both implementations provide good results, each excelling in specific operations.
-For addition and subtraction, the main implementation is recommended.
-If efficient multiplication is crucial, the reference implementation is preferred.
-
-## Authors
-
-Jonas Nögel
-Selim Mert Kas¸tan
-Maxim Balajan
+Please refer to the Ausarbeitung for exact details.
